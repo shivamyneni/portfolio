@@ -2,17 +2,24 @@ import Header from '@/containers/Header'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+
 import React from 'react'
 import gsap from 'gsap'
+import { useLoader, Canvas } from '@react-three/fiber'
+
+import { OrbitControls } from '@react-three/drei'
 
 const Home: NextPage = () => {
 
   const introRef=React.useRef(null)
+  const titleRef=React.useRef(null)
     React.useEffect(()=>{
-gsap.fromTo(introRef.current,{xPercent:-100},{xPercent:0,duration:1})
+gsap.timeline().fromTo(introRef.current,{xPercent:-100},{xPercent:0,duration:1})
+// .fromTo(titleRef.current,{color:'#cd6475'},{color:'#5352ED',repeat:-1,duration:4})
 
     },[])
     
+  
   return (
     <div className={'w-screen h-fit '}>
       <Head>
@@ -22,12 +29,12 @@ gsap.fromTo(introRef.current,{xPercent:-100},{xPercent:0,duration:1})
       </Head>
 <Header/>
       <div className='w-screen h-screen  bg-white flex xs:flex-col sm:flex-col md:flex-row xs:justify-center md:items-center'>
-<div className='xs:w-[100vw] sm:w-[100vw] md:w-[50vw] xs:px-[15px] sm:px-[15px] md:px-[40px] xs:h-[50vh] sm:h-[50vh] md:h-[100vh] glitch-wrapper bg-background bg-cover ' >
-  <span className='font-pixel xs:text-[30px] md:text-[50px] uppercase text-white glitch' data-text="I am a software developer" ref={introRef}>I am a software developer</span>
-  
+<div className='xs:w-[100vw] sm:w-[100vw]  flex flex-col md:w-[50vw]  xs:h-[50vh] sm:h-[50vh] md:h-[100vh]  bg-cover  justify-center' ref={introRef} >
+  <p className='font-pixel xs:text-[30px] md:text-[50px] uppercase text-[#5352ED] px-[30px]'  >I am a </p>
+  <p ref={titleRef} className=' blink  font-pixel xs:text-[30px] md:text-[50px] uppercase px-[30px] text-[#e63351] '>software developer</p>
 </div>
-<div className='xs:w-[100vw] sm:w-[100vw] md:w-[50vw] xs:h-[50vh] sm:h-[50vh] md:h-[100vh] xs:px-[15px] sm:px-[15px] md:px-[40px] '>
-
+<div className='xs:w-[100vw] sm:w-[100vw] md:w-[50vw] xs:h-[50vh] sm:h-[50vh] md:h-[100vh]  '>
+<img src='/Images/developer.png' className='w-full bg-bottom bg-cover h-full'/>
 </div>
       </div>
     </div>

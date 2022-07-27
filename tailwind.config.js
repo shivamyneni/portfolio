@@ -10,6 +10,7 @@ module.exports = {
       ...defaultTheme.screens,
     },
     extend: {
+    
       fontFamily:{
         Sora:[ 'Sora'],
         pixel:["'Press Start 2P'", "cursive"]
