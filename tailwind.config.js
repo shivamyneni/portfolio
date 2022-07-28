@@ -16,6 +16,7 @@ module.exports = {
         pixel:["'Press Start 2P'", "cursive"]
       }, backgroundImage: {
         'background': "url('/Images/background.png')",
+        'cursor':"url('/Images/cursor.png')"
       },
     },
   },
