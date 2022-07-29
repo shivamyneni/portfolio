@@ -19,7 +19,7 @@ const navbarHeaderRef=React.useRef<any>(null)
       gsap
         .timeline()
         .to(navbarRef.current, {
-          height: navitemRef.current.clientHeight * 8,
+          height: navitemRef.current.clientHeight * 6,
           duration: 0.5,
         })
         .to(".navitem", { opacity: 1, duration: 0.5 });
@@ -65,7 +65,7 @@ const navbarHeaderRef=React.useRef<any>(null)
         />
       </div>
 
-      <div className="w-[100vw]  h-0 overflow-hidden  " ref={navbarRef}>
+      <div className="w-[100vw] flex flex-col justify-around  h-0 overflow-hidden  " ref={navbarRef}>
         <div
           className="xs:w-[40vw] sm:w-[40vw] md:w-[25vw] h-fit opacity-0  navitem"
           ref={navitemRef}

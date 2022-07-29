@@ -46,15 +46,26 @@ export const Intro = () => {
           development with react native and reactjs.
         </p>
        <div className="flex flex-row px-[30px] mt-[20px]">
-         <img
+         <a href="https://www.instagram.com/_shivamyneni/"><img
           src="/Images/instagram.png"
-          className=" xs:h-[50px] sm:h-[50px] md:h-[80px] xs:w-[50px] sm:w-[50px] md:w-[80px]"
+          className=" xs:h-[60px] sm:h-[60px] md:h-[80px] transition xs:w-[60px] sm:w-[60px] md:w-[80px]  hover:scale-125"
 
-        />
+        /></a> 
+        <a href='https://www.linkedin.com/in/shivamyneni/'>
          <img
           src="/Images/linkedin.png"
-          className=" xs:h-[50px] sm:h-[50px] md:h-[80px] xs:w-[50px] sm:w-[50px] md:w-[80px]"
-        />
+          className=" xs:h-[60px] sm:h-[60px] md:h-[80px] transition xs:w-[60px] sm:w-[60px] md:w-[80px] hover:scale-125"
+        /></a>
+        <a href='https://twitter.com/Shivamyneni1'>
+         <img
+          src="/Images/twitter.png"
+          className=" xs:h-[60px] sm:h-[60px] md:h-[80px] transition xs:w-[60px] sm:w-[60px] md:w-[80px] hover:scale-125"
+        /></a>
+        <a href='https://github.com/shivamyneni'>
+         <img
+          src="/Images/github.png"
+          className=" xs:h-[50px] sm:h-[50px] md:h-[60px] transition xs:w-[50px] sm:w-[50px] md:w-[60px] hover:scale-125"
+        /></a>
         </div>
       </div>
       <div className="xs:w-[100vw] sm:w-[100vw] md:w-[50vw] xs:h-[50vh] sm:h-[50vh] md:h-[100vh]  ">
