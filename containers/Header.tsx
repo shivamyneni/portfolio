@@ -19,7 +19,7 @@ const navbarHeaderRef=React.useRef<any>(null)
       gsap
         .timeline()
         .to(navbarRef.current, {
-          height: navitemRef.current.clientHeight * 6,
+          height: navitemRef.current.clientHeight * 5,
           duration: 0.5,
         })
         .to(".navitem", { opacity: 1, duration: 0.5 });
@@ -43,8 +43,8 @@ const navbarHeaderRef=React.useRef<any>(null)
   
   return (
     <div
-      className={`w-screen h-auto flex flex-col xs:px-[15px] sm:px-[15px] md:px-[40px] xs:py-[15px] sm:py-[15px] md:py-[40px] fixed  z-50 backdrop-filter backdrop-blur-md bg-white ${
-        showNavbar ? "bg-opacity-30" : "bg-opacity-100"
+      className={`w-screen h-auto flex flex-col xs:px-[15px] sm:px-[15px] md:px-[40px] xs:py-[15px] sm:py-[15px] md:py-[40px] fixed  z-50 backdrop-filter backdrop-blur-md bg-white 
+        
       }`}
     >
       <div
@@ -52,7 +52,7 @@ const navbarHeaderRef=React.useRef<any>(null)
         ref={headerRef}
       >
         <div className="xs:w-[40vw] sm:w-[40vw] md:w-[25vw] h-fit  ">
-          <p className=" font-bold xs:text-[20px] sm:text-[15px] text-[#5352ED] md:text-[20px] font-Sora uppercase" ref={navbarHeaderRef} onMouseEnter={()=>setHeaderText('my portfolio')} onMouseLeave={()=>{setHeaderText('shivamyneni')}}>
+          <p className=" font-bold xs:text-[20px] sm:text-[15px] transition text-[#5352ED] md:text-[20px] font-Sora uppercase" ref={navbarHeaderRef} onMouseEnter={()=>setHeaderText('my portfolio')} onMouseLeave={()=>{setHeaderText('shivamyneni')}}>
            {headerText}.
           </p>
         </div>
@@ -66,14 +66,7 @@ const navbarHeaderRef=React.useRef<any>(null)
       </div>
 
       <div className="w-[100vw] flex flex-col justify-around  h-0 overflow-hidden  " ref={navbarRef}>
-        <div
-          className="xs:w-[40vw] sm:w-[40vw] md:w-[25vw] h-fit opacity-0  navitem"
-          ref={navitemRef}
-        >
-          <p className=" font-bold xs:text-[15px] sm:text-[15px] text-[#5352ED] md:text-[20px] font-pixel mb-[8px] uppercase">
-            about
-          </p>
-        </div>
+       
         <div
           className="xs:w-[40vw] sm:w-[40vw] md:w-[25vw] h-fit opacity-0  navitem"
           ref={navitemRef}

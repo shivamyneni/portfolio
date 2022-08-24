@@ -24,9 +24,9 @@ export const Intro = () => {
  
   }, []);
   return (
-    <div className="w-screen h-screen  bg-white flex xs:flex-col sm:flex-col md:flex-row xs:justify-center md:items-center">
+    <div className="max-w-[100vw] max-h-screen  bg-white flex xs:flex-col sm:flex-col md:flex-row xs:justify-center md:items-center">
       <div
-        className="xs:w-[100vw] sm:w-[100vw] mt-[200px]  flex flex-col md:w-[50vw]  xs:max-h-[50vh] sm:max-h-[50vh] md:max-h-[100vh]  bg-cover  justify-center"
+        className="xs:max-w-[100vw] sm:max-w-[100vw] mt-[200px]  flex flex-col md:max-w-[50vw]  xs:max-h-[50vh] sm:max-h-[50vh] md:max-h-[100vh]  bg-cover  justify-center"
         ref={introRef}
       >
         <p className="font-pixel xs:text-[30px] md:text-[50px] uppercase text-[#5352ED] px-[30px]">
